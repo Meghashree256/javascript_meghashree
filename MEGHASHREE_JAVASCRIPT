@@ -1,0 +1,32 @@
+let nfts = [];
+function mintNFT(name , description , age)
+{
+    const nftMetadata =
+    {
+        "name" : name,
+        "description" : description ,
+        "age" : age
+    };
+    nfts.push(nftMetadata);
+    return nftMetadata;
+}
+function listNFTs()
+{
+    for(let i =0 ; i< nfts.length ; i++)
+    {
+        console.log("\n ID: \t\t"+(i+1));
+        console.log("Name :" + nfts[i].name);
+        console.log("Description :" + nfts[i].description);
+        console.log("age :" + nfts[i].age);
+    }
+}
+function getTotalSupply()
+{
+    return nfts.length;
+}
+mintNFT("Meghashree", "short", "21");
+mintNFT("Nikita", "tall", "18");
+mintNFT("Unnati", "slim", "19");
+mintNFT("Sajda", "chubby", "20");
+listNFTs();
+console.log("\n Toatal Number of NFTs:", getTotalSupply());
